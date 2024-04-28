@@ -313,11 +313,15 @@ declare namespace Server {
     res: TServerResponse,
     proxyRes: TIncomingMessage
   ) => void;
-  type OpenCallback = (proxySocket: net.Socket) => void;
+  type OpenCallback = (
+    proxySocket: net.Socket,
+    proxiedSocket: net.Socket
+  ) => void;
   type CloseCallback<TIncomingMessage = http.IncomingMessage> = (
     proxyRes: TIncomingMessage,
     proxySocket: net.Socket,
-    proxyHead: any
+    proxyHead: any,
+    proxiedSocket: net.Socket
   ) => void;
   type ErrorCallback<
     TError = Error,
