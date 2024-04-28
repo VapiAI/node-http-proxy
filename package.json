@@ -1,5 +1,5 @@
 {
-  "name": "http-proxy",
+  "name": "@vapi-ai/http-proxy",
   "version": "1.18.1",
   "repository": {
     "type": "git",
